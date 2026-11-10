@@ -8,7 +8,132 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Public+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
-<style>input,select{-webkit-user-select:text;user-select:text}:root{--bg:#edf1ef; --panel:#ffffff; --ink:#16211e; --muted:#566661; --line:#d2dbd7; --grid:#e2e9e6; --scope:#f7faf9; --wire:#3a4a45;--accent:#0e6c60; --accent-ink:#ffffff; --accent-soft:#dcefeb;--c-src:#2a5fc4; --c-r:#c2501c; --c-l:#7a43c0; --c-c:#11855c; --c-i:#a87300;--f-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;--f-body:"Public Sans", "Segoe UI", system-ui, sans-serif;--f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;--r:10px;}@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){--bg:#0e1413; --panel:#151d1b; --ink:#e3ebe8; --muted:#93a39d; --line:#2a3633; --grid:#1e2926; --scope:#101816; --wire:#9fb1ab;--accent:#52c3b2; --accent-ink:#06201c; --accent-soft:#183531;--c-src:#729dff; --c-r:#ff8b5e; --c-l:#b98fff; --c-c:#47d29b; --c-i:#f0be3f; color-scheme:dark }}:root[data-theme="dark"]{--bg:#0e1413; --panel:#151d1b; --ink:#e3ebe8; --muted:#93a39d; --line:#2a3633; --grid:#1e2926; --scope:#101816; --wire:#9fb1ab;--accent:#52c3b2; --accent-ink:#06201c; --accent-soft:#183531;--c-src:#729dff; --c-r:#ff8b5e; --c-l:#b98fff; --c-c:#47d29b; --c-i:#f0be3f; color-scheme:dark }*{box-sizing:border-box}[hidden]{display:none!important}body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}header.wrap{padding-block:28px 18px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}h1{font-family:var(--f-display);font-weight:700;font-size:clamp(28px,4vw,40px);letter-spacing:-0.02em;margin:0;text-wrap:balance}header p{margin:0;color:var(--muted);max-width:62ch}h2{font-family:var(--f-display);font-weight:500;font-size:18px;margin:0;text-wrap:balance}.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:600}main.wrap{display:grid;gap:16px;padding-block:0 40px}.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px;min-width:0}.row1{display:grid;grid-template-columns:320px minmax(0,1fr);gap:16px;align-items:start}.row3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}@media (max-width:980px){.row1{grid-template-columns:minmax(0,1fr)}.row3{grid-template-columns:minmax(0,1fr)}}.controls{display:flex;flex-direction:column;gap:16px}.seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:8px;padding:3px;gap:3px;background:var(--bg)}.seg input{position:absolute;opacity:0;pointer-events:none}.seg label{text-align:center;padding:8px 6px;border-radius:6px;cursor:pointer;font-weight:600;font-size:14px;color:var(--muted)}.seg input:checked + label{background:var(--panel);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.12)}.seg input:focus-visible + label{outline:2px solid var(--accent);outline-offset:1px}.fields{display:grid;gap:12px}.field{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:4px 10px}.field > label{font-weight:600;font-size:14px;grid-column:1/-1;display:flex;align-items:center;gap:8px}.sym{display:inline-grid;place-items:center;min-width:26px;height:22px;border-radius:5px;font-family:var(--f-mono);font-size:12px;font-weight:500;color:var(--panel)}.sym.r{background:var(--c-r)}.sym.l{background:var(--c-l)}.sym.c{background:var(--c-c)}.sym.s{background:var(--c-src)}.inbox{display:flex;align-items:stretch;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:var(--panel);grid-column:1/-1}.inbox:focus-within{outline:2px solid var(--accent);outline-offset:1px}.inbox input{flex:1;min-width:0;border:0;padding:8px 10px;font:500 15px var(--f-mono);background:transparent;color:var(--ink);outline:none}.inbox span{padding:8px 10px;background:var(--bg);color:var(--muted);font:13px var(--f-mono);border-left:1px solid var(--line);display:grid;place-items:center;min-width:52px}input[type=range]{width:100%;accent-color:var(--accent);grid-column:1/-1}.check{display:flex;gap:8px;align-items:flex-start;font-size:14px;color:var(--ink)}.check input{margin-top:3px;accent-color:var(--accent)}.hint{font-size:12.5px;color:var(--muted);margin:0}.presets{display:flex;flex-wrap:wrap;gap:6px}button{font:inherit;cursor:pointer}.chip{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:5px 11px;font-size:13px}.chip:hover{border-color:var(--accent)}.chip:focus-visible,.btn:focus-visible,.legend button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}.error{color:#c0302b;font-weight:600;font-size:13.5px;margin:0}:root[data-theme="dark"] .error{color:#ff7b72}@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .error{color:#ff7b72}}.stage{display:flex;flex-direction:column;gap:12px}.stage-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}#circuit{width:100%;height:auto;display:block;max-height:360px}#circuit text{font-family:var(--f-mono);font-size:13px;fill:var(--ink)}#circuit .name{font-weight:500}#circuit .val{fill:var(--muted);font-size:12.5px}.w{fill:none;stroke:var(--wire);stroke-width:2.5;stroke-linejoin:round}.cover{fill:var(--panel)}.k-r{fill:none;stroke:var(--c-r);stroke-width:2.6;stroke-linejoin:round}.k-l{fill:none;stroke:var(--c-l);stroke-width:2.6}.k-c{stroke:var(--c-c);stroke-width:4;stroke-linecap:round}.k-s{stroke:var(--c-src);stroke-width:4;stroke-linecap:round;fill:none}.k-sc{fill:var(--panel);stroke:var(--c-src);stroke-width:2.6}.k-sw{fill:none;stroke:var(--c-src);stroke-width:2.2}.glow-r{fill:none;stroke:var(--c-r);stroke-width:12;stroke-linejoin:round;opacity:0}.glow-l{fill:none;stroke:var(--c-l);stroke-width:12;opacity:0}.field-c{fill:var(--c-c);opacity:0}.dot{fill:var(--c-i)}.arrow{fill:var(--c-i)}#circuit text.chg{font-size:18px;font-weight:500;fill:var(--c-c)}#circuit text.cur{fill:var(--c-i);font-weight:500}.transport{display:flex;flex-wrap:wrap;align-items:center;gap:10px}.btn{border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);border-radius:7px;padding:7px 14px;font-weight:600;font-size:14px;min-width:84px}.btn.ghost{background:transparent;color:var(--accent)}.transport input[type=range]{flex:1 1 180px;width:auto}.transport select{font:13px var(--f-body);padding:6px 8px;border-radius:7px;border:1px solid var(--line);background:var(--panel);color:var(--ink)}.clock{font:500 13px var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums;min-width:15ch}.figures{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:1px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}.fig{background:var(--panel);box-shadow:0 0 0 1px var(--line);padding:12px 14px;display:flex;flex-direction:column;gap:2px;min-width:0}.fig b{font:500 17px var(--f-mono);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.fig small{color:var(--muted);font-size:12px}.pill{display:inline-block;align-self:flex-start;font:600 13px var(--f-body);padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}.scope{display:flex;flex-direction:column;gap:10px}.scope-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center}.legend{display:flex;flex-wrap:wrap;gap:6px}.legend button{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:4px 9px;font:500 12.5px var(--f-mono)}.legend button[aria-pressed="false"]{opacity:.45;text-decoration:line-through}.sw{width:14px;height:3px;border-radius:2px;display:inline-block}canvas{display:block;width:100%}#cvV{height:250px}#cvI{height:170px}.chan{font:500 12px var(--f-mono);color:var(--muted);margin:2px 0 -4px}.story{margin:0;color:var(--muted);font-size:14px;max-width:80ch}.story strong{color:var(--ink);font-weight:600}.inst{display:flex;flex-direction:column;gap:10px}#cvP{height:280px}#cvF{height:280px}.ebars{display:grid;gap:10px}.ebar{display:grid;grid-template-columns:1fr auto;gap:3px 8px;font-size:13.5px}.ebar .track{grid-column:1/-1;height:12px;background:var(--bg);border-radius:4px;overflow:hidden;border:1px solid var(--line)}.ebar .fill{height:100%;width:0}.ebar span:nth-child(2){font:500 13px var(--f-mono);font-variant-numeric:tabular-nums}.egroup{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:600;margin-top:4px}footer.wrap{padding-block:0 30px;color:var(--muted);font-size:12.5px}@media (prefers-reduced-motion: reduce){*{transition:none!important}}</style>
+<style>
+input,select{-webkit-user-select:text;user-select:text}
+/* Layout: a bench — controls beside a live schematic, then a two-channel scope, then three analysis instruments. */
+:root{
+  --bg:#edf1ef; --panel:#ffffff; --ink:#16211e; --muted:#566661; --line:#d2dbd7; --grid:#e2e9e6; --scope:#f7faf9; --wire:#3a4a45;
+  --accent:#0e6c60; --accent-ink:#ffffff; --accent-soft:#dcefeb;
+  --c-src:#2a5fc4; --c-r:#c2501c; --c-l:#7a43c0; --c-c:#11855c; --c-i:#a87300;
+  --f-display:"Bricolage Grotesque", "Segoe UI", system-ui, sans-serif;
+  --f-body:"Public Sans", "Segoe UI", system-ui, sans-serif;
+  --f-mono:"IBM Plex Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+  --r:10px;
+}
+@media (prefers-color-scheme: dark){ :root:not([data-theme="light"]){
+  --bg:#0e1413; --panel:#151d1b; --ink:#e3ebe8; --muted:#93a39d; --line:#2a3633; --grid:#1e2926; --scope:#101816; --wire:#9fb1ab;
+  --accent:#52c3b2; --accent-ink:#06201c; --accent-soft:#183531;
+  --c-src:#729dff; --c-r:#ff8b5e; --c-l:#b98fff; --c-c:#47d29b; --c-i:#f0be3f; color-scheme:dark }}
+:root[data-theme="dark"]{
+  --bg:#0e1413; --panel:#151d1b; --ink:#e3ebe8; --muted:#93a39d; --line:#2a3633; --grid:#1e2926; --scope:#101816; --wire:#9fb1ab;
+  --accent:#52c3b2; --accent-ink:#06201c; --accent-soft:#183531;
+  --c-src:#729dff; --c-r:#ff8b5e; --c-l:#b98fff; --c-c:#47d29b; --c-i:#f0be3f; color-scheme:dark }
+
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:15px;line-height:1.5}
+.wrap{max-width:1240px;margin:0 auto;padding-left:max(16px, env(safe-area-inset-left, 0px));padding-right:max(16px, env(safe-area-inset-right, 0px))}
+header.wrap{padding-block:28px 18px;display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 18px}
+h1{font-family:var(--f-display);font-weight:700;font-size:clamp(28px,4vw,40px);letter-spacing:-0.02em;margin:0;text-wrap:balance}
+header p{margin:0;color:var(--muted);max-width:62ch}
+h2{font-family:var(--f-display);font-weight:500;font-size:18px;margin:0;text-wrap:balance}
+.eyebrow{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:600}
+main.wrap{display:grid;gap:16px;padding-block:0 40px}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:18px;min-width:0}
+.row1{display:grid;grid-template-columns:320px minmax(0,1fr);gap:16px;align-items:start}
+.row3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+@media (max-width:980px){.row1{grid-template-columns:minmax(0,1fr)}.row3{grid-template-columns:minmax(0,1fr)}}
+
+/* controls */
+.controls{display:flex;flex-direction:column;gap:16px}
+.seg{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--line);border-radius:8px;padding:3px;gap:3px;background:var(--bg)}
+.seg input{position:absolute;opacity:0;pointer-events:none}
+.seg label{text-align:center;padding:8px 6px;border-radius:6px;cursor:pointer;font-weight:600;font-size:14px;color:var(--muted)}
+.seg input:checked + label{background:var(--panel);color:var(--ink);box-shadow:0 1px 2px rgba(0,0,0,.12)}
+.seg input:focus-visible + label{outline:2px solid var(--accent);outline-offset:1px}
+.fields{display:grid;gap:12px}
+.field{display:grid;grid-template-columns:auto 1fr;align-items:center;gap:4px 10px}
+.field > label{font-weight:600;font-size:14px;grid-column:1/-1;display:flex;align-items:center;gap:8px}
+.sym{display:inline-grid;place-items:center;min-width:26px;height:22px;border-radius:5px;font-family:var(--f-mono);font-size:12px;font-weight:500;color:var(--panel)}
+.sym.r{background:var(--c-r)}.sym.l{background:var(--c-l)}.sym.c{background:var(--c-c)}.sym.s{background:var(--c-src)}
+.inbox{display:flex;align-items:stretch;border:1px solid var(--line);border-radius:7px;overflow:hidden;background:var(--panel);grid-column:1/-1}
+.inbox:focus-within{outline:2px solid var(--accent);outline-offset:1px}
+.inbox input{flex:1;min-width:0;border:0;padding:8px 10px;font:500 15px var(--f-mono);background:transparent;color:var(--ink);outline:none}
+.inbox span{padding:8px 10px;background:var(--bg);color:var(--muted);font:13px var(--f-mono);border-left:1px solid var(--line);display:grid;place-items:center;min-width:52px}
+input[type=range]{width:100%;accent-color:var(--accent);grid-column:1/-1}
+.check{display:flex;gap:8px;align-items:flex-start;font-size:14px;color:var(--ink)}
+.check input{margin-top:3px;accent-color:var(--accent)}
+.hint{font-size:12.5px;color:var(--muted);margin:0}
+.presets{display:flex;flex-wrap:wrap;gap:6px}
+button{font:inherit;cursor:pointer}
+.chip{border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:999px;padding:5px 11px;font-size:13px}
+.chip:hover{border-color:var(--accent)}
+.chip:focus-visible,.btn:focus-visible,.legend button:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+.error{color:#c0302b;font-weight:600;font-size:13.5px;margin:0}
+:root[data-theme="dark"] .error{color:#ff7b72}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]) .error{color:#ff7b72}}
+
+/* stage */
+.stage{display:flex;flex-direction:column;gap:12px}
+.stage-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap}
+#circuit{width:100%;height:auto;display:block;max-height:360px}
+#circuit text{font-family:var(--f-mono);font-size:13px;fill:var(--ink)}
+#circuit .name{font-weight:500}
+#circuit .val{fill:var(--muted);font-size:12.5px}
+.w{fill:none;stroke:var(--wire);stroke-width:2.5;stroke-linejoin:round}
+.cover{fill:var(--panel)}
+.k-r{fill:none;stroke:var(--c-r);stroke-width:2.6;stroke-linejoin:round}
+.k-l{fill:none;stroke:var(--c-l);stroke-width:2.6}
+.k-c{stroke:var(--c-c);stroke-width:4;stroke-linecap:round}
+.k-s{stroke:var(--c-src);stroke-width:4;stroke-linecap:round;fill:none}
+.k-sc{fill:var(--panel);stroke:var(--c-src);stroke-width:2.6}
+.k-sw{fill:none;stroke:var(--c-src);stroke-width:2.2}
+.glow-r{fill:none;stroke:var(--c-r);stroke-width:12;stroke-linejoin:round;opacity:0}
+.glow-l{fill:none;stroke:var(--c-l);stroke-width:12;opacity:0}
+.field-c{fill:var(--c-c);opacity:0}
+.dot{fill:var(--c-i)}
+.arrow{fill:var(--c-i)}
+#circuit text.chg{font-size:18px;font-weight:500;fill:var(--c-c)}
+#circuit text.cur{fill:var(--c-i);font-weight:500}
+.transport{display:flex;flex-wrap:wrap;align-items:center;gap:10px}
+.btn{border:1px solid var(--accent);background:var(--accent);color:var(--accent-ink);border-radius:7px;padding:7px 14px;font-weight:600;font-size:14px;min-width:84px}
+.btn.ghost{background:transparent;color:var(--accent)}
+.transport input[type=range]{flex:1 1 180px;width:auto}
+.transport select{font:13px var(--f-body);padding:6px 8px;border-radius:7px;border:1px solid var(--line);background:var(--panel);color:var(--ink)}
+.clock{font:500 13px var(--f-mono);color:var(--muted);font-variant-numeric:tabular-nums;min-width:15ch}
+
+/* figures */
+.figures{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:1px;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+.fig{background:var(--panel);box-shadow:0 0 0 1px var(--line);padding:12px 14px;display:flex;flex-direction:column;gap:2px;min-width:0}
+.fig b{font:500 17px var(--f-mono);font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+.fig small{color:var(--muted);font-size:12px}
+.pill{display:inline-block;align-self:flex-start;font:600 13px var(--f-body);padding:3px 10px;border-radius:999px;background:var(--accent-soft);color:var(--accent)}
+
+/* scope */
+.scope{display:flex;flex-direction:column;gap:10px}
+.scope-head{display:flex;flex-wrap:wrap;justify-content:space-between;gap:10px;align-items:center}
+.legend{display:flex;flex-wrap:wrap;gap:6px}
+.legend button{display:flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--panel);color:var(--ink);border-radius:6px;padding:4px 9px;font:500 12.5px var(--f-mono)}
+.legend button[aria-pressed="false"]{opacity:.45;text-decoration:line-through}
+.sw{width:14px;height:3px;border-radius:2px;display:inline-block}
+canvas{display:block;width:100%}
+#cvV{height:250px}#cvI{height:170px}
+.chan{font:500 12px var(--f-mono);color:var(--muted);margin:2px 0 -4px}
+.story{margin:0;color:var(--muted);font-size:14px;max-width:80ch}
+.story strong{color:var(--ink);font-weight:600}
+
+/* instruments */
+.inst{display:flex;flex-direction:column;gap:10px}
+#cvP{height:280px}#cvF{height:280px}
+.ebars{display:grid;gap:10px}
+.ebar{display:grid;grid-template-columns:1fr auto;gap:3px 8px;font-size:13.5px}
+.ebar .track{grid-column:1/-1;height:12px;background:var(--bg);border-radius:4px;overflow:hidden;border:1px solid var(--line)}
+.ebar .fill{height:100%;width:0}
+.ebar span:nth-child(2){font:500 13px var(--f-mono);font-variant-numeric:tabular-nums}
+.egroup{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--muted);font-weight:600;margin-top:4px}
+footer.wrap{padding-block:0 30px;color:var(--muted);font-size:12.5px}
+@media (prefers-reduced-motion: reduce){*{transition:none!important}}
+</style>
 </head>
 <body style="-webkit-user-select:none;user-select:none">
 
@@ -55,13 +180,14 @@
           <button class="chip" data-p="cap">AC capacitive</button>
         </div>
       </div>
-      <p class="hint">Series circuit. At t = 0 the switch closes with the capacitor empty and no current flowing. AC voltage is entered as the peak value Vm, so v(t) = Vm sin(2πft).</p>
+      <p class="hint">Series circuit. At t = 0 the switch closes with the capacitor empty and no current flowing. A DC run pauses itself once the capacitor is fully charged and the current has died away. AC voltage is entered as the peak value Vm, so v(t) = Vm sin(2πft).</p>
     </section>
 
     <section class="card stage" aria-label="Animated circuit">
       <div class="stage-head">
         <h2>Live schematic</h2>
         <span class="eyebrow">dots = moving charge · glow = heat and magnetic field</span>
+        <span class="pill" id="stateMsg" hidden>Steady state — L is a short, C is fully charged, i → 0. Circuit stopped.</span>
       </div>
       <svg id="circuit" viewBox="0 0 560 300" role="img" aria-label="Series RLC circuit with animated current">
         <path id="loop" class="w" d="M60 150 V50 H500 V250 H60 Z"/>
@@ -165,6 +291,424 @@
 </main>
 <footer class="wrap">Solved numerically with the trapezoidal rule on L·di/dt + R·i + q/C = v(t), q′ = i. Values are ideal components with zero initial charge and current.</footer>
 
-<script>/* RLC Circuit Lab. Classroom use only. Please do not copy or redistribute. */document.addEventListener("contextmenu",(t=>t.preventDefault())),document.addEventListener("keydown",(t=>{const e=(t.key||"").toLowerCase();(t.ctrlKey||t.metaKey)&&("s"===e||"u"===e||t.altKey&&"i"===e||t.shiftKey&&"i"===e)&&t.preventDefault(),"f12"===e&&t.preventDefault()})),function(){const t=t=>document.getElementById(t),e=1500,a=window.matchMedia("(prefers-reduced-motion: reduce)").matches;let n=null,o=null,s=null;const i={t:0,playing:!a,dur:8};let l=!0,r=!0;const c={vs:!0,vr:!0,vl:!0,vc:!0};let h={};function d(){const t=getComputedStyle(document.documentElement),e=e=>t.getPropertyValue(e).trim();h={ink:e("--ink"),muted:e("--muted"),line:e("--line"),grid:e("--grid"),scope:e("--scope"),panel:e("--panel"),src:e("--c-src"),r:e("--c-r"),l:e("--c-l"),c:e("--c-c"),i:e("--c-i"),accent:e("--accent"),font:"IBM Plex Mono, ui-monospace, monospace"}}function p(t,e,a){if(a=a||3,!isFinite(t))return"∞ "+e;if(0===t)return"0 "+e;const n=[[1e9,"G"],[1e6,"M"],[1e3,"k"],[1,""],[.001,"m"],[1e-6,"µ"],[1e-9,"n"],[1e-12,"p"]],o=Math.abs(t);for(const[s,i]of n)if(o>=.9995*s)return+(t/s).toPrecision(a)+" "+i+e;return+(t/1e-12).toPrecision(a)+" p"+e}const u=t=>180*t/Math.PI;function f(t){const e=window.devicePixelRatio||1,a=t.clientWidth,n=t.clientHeight;t.width===Math.round(a*e)&&t.height===Math.round(n*e)||(t.width=Math.round(a*e),t.height=Math.round(n*e));const o=t.getContext("2d");return o.setTransform(e,0,0,e,0,0),o.clearRect(0,0,a,n),{ctx:o,w:a,h:n}}function m(t,e){const a=t/e,n=Math.pow(10,Math.floor(Math.log10(a))),o=a/n;return(o<1.5?1:o<3?2:o<7?5:10)*n}function v(t,a,n,o){const{ctx:i,w:l,h:r}=f(t),c=62,d=l-c-12,u=r-8-24;i.fillStyle=h.scope,i.fillRect(c,8,d,u);let v=0;a.forEach((t=>{t.on&&t.max>v&&(v=t.max)})),v>0||(v=1);const g=m(2.1*v,6),y=Math.ceil(1.04*v/g)*g,x=t=>c+d*t/s.tEnd,M=t=>8+u/2-t/y*u/2;i.font="11px "+h.font,i.textBaseline="middle",i.lineWidth=1;for(let t=-y;t<=y+.01*g;t+=g){const e=Math.round(M(t))+.5;i.strokeStyle=Math.abs(t)<.01*g?h.muted:h.grid,i.globalAlpha=Math.abs(t)<.01*g?.6:1,i.beginPath(),i.moveTo(c,e),i.lineTo(c+d,e),i.stroke(),i.globalAlpha=1,i.fillStyle=h.muted,i.textAlign="right",i.fillText(p(Math.abs(t)<.01*g?0:t,o,3),56,e)}const b=m(s.tEnd,Math.max(3,Math.floor(d/90)));i.textAlign="center",i.textBaseline="top";for(let t=0;t<=1.0001*s.tEnd;t+=b){const e=Math.round(x(t))+.5;i.strokeStyle=h.grid,i.beginPath(),i.moveTo(e,8),i.lineTo(e,8+u),i.stroke(),i.fillStyle=h.muted,i.fillText(p(t,"s",3),e,8+u+6)}i.strokeStyle=h.line,i.strokeRect(62.5,8.5,d-1,u-1),i.save(),i.beginPath(),i.rect(c,8,d,u),i.clip(),a.forEach((t=>{if(t.on){i.strokeStyle=t.color,i.lineJoin="round",i.globalAlpha=.22,i.lineWidth=1.2,i.beginPath();for(let a=0;a<e;a++){const e=x(s.t[a]),n=M(t.d[a]);a?i.lineTo(e,n):i.moveTo(e,n)}i.stroke(),i.globalAlpha=1,i.lineWidth=2,i.beginPath();for(let e=0;e<=n;e++){const a=x(s.t[e]),n=M(t.d[e]);e?i.lineTo(a,n):i.moveTo(a,n)}i.stroke()}}));const C=x(s.t[n]);i.strokeStyle=h.ink,i.globalAlpha=.35,i.lineWidth=1,i.setLineDash([3,3]),i.beginPath(),i.moveTo(C,8),i.lineTo(C,8+u),i.stroke(),i.setLineDash([]),i.globalAlpha=1,a.forEach((t=>{t.on&&(i.fillStyle=t.color,i.beginPath(),i.arc(C,M(t.d[n]),3.5,0,7),i.fill())})),i.restore()}function g(t,e,a,n,o,s,i,l){const r=Math.atan2(o-a,n-e),c=Math.hypot(n-e,o-a);if(t.strokeStyle=s,t.fillStyle=s,t.lineWidth=i,t.beginPath(),t.moveTo(e,a),t.lineTo(n,o),t.stroke(),c>6){const e=Math.min(10,.4*c);t.beginPath(),t.moveTo(n,o),t.lineTo(n-e*Math.cos(r-.4),o-e*Math.sin(r-.4)),t.lineTo(n-e*Math.cos(r+.4),o-e*Math.sin(r+.4)),t.closePath(),t.fill()}l&&(t.font="500 12px "+h.font,t.textAlign="center",t.textBaseline="middle",t.fillText(l,n+14*Math.cos(r),o+14*Math.sin(r)))}const y=t("loop"),x=y.getTotalLength(),M=30,b=[];for(let e=0;e<M;e++){const e=document.createElementNS("http://www.w3.org/2000/svg","circle");e.setAttribute("r","3.6"),e.setAttribute("class","dot"),t("dots").appendChild(e),b.push(e)}function C(){if(!s)return;const a=Math.max(0,Math.min(e-1,Math.round(i.t/s.dt)));!function(e){const a=s.i[e],o=s.q[e];let l=o*(s.max.i>0?160/(s.max.i*(s.tEnd/i.dur)):0)%x;l<0&&(l+=x);const r=x/M;for(let t=0;t<M;t++){const e=y.getPointAtLength((t*r+l)%x);b[t].setAttribute("cx",e.x.toFixed(1)),b[t].setAttribute("cy",e.y.toFixed(1));const o=e.x>495&&e.y>141&&e.y<159||"dc"===n.mode&&e.x<65&&e.y>141&&e.y<159;b[t].style.opacity=o?0:s.max.i>0?.35+.65*Math.min(1,Math.abs(a)/s.max.i):.35}const c=s.max.i>0?Math.abs(a)/s.max.i:0;t("gR").style.opacity=(.4*c*c).toFixed(3),t("gL").style.opacity=(.3*c).toFixed(3);const h=s.max.q>0?o/s.max.q:0;t("fC").style.opacity=(.45*Math.abs(h)).toFixed(3),t("qTop").textContent=h>=0?"+":"−",t("qBot").textContent=h>=0?"−":"+",t("qTop").style.opacity=t("qBot").style.opacity=Math.abs(h).toFixed(3),t("vR").textContent="vR = "+p(s.vr[e],"V"),t("vL").textContent="vL = "+p(s.vl[e],"V"),t("vC").textContent="vC = "+p(s.vc[e],"V"),t("vS").textContent="v = "+p(s.vs[e],"V"),t("tI").textContent="i = "+p(a,"A");const d=t("arr");d.style.opacity=c>.02?1:.15,d.setAttribute("transform",a<0?"rotate(180 278 250)":"")}(a),v(t("cvV"),[{d:s.vs,max:s.max.vs,color:h.src,on:c.vs},{d:s.vr,max:s.max.vr,color:h.r,on:c.vr},{d:s.vl,max:s.max.vl,color:h.l,on:c.vl},{d:s.vc,max:s.max.vc,color:h.c,on:c.vc}],a,"V"),v(t("cvI"),[{d:s.i,max:s.max.i,color:h.i,on:!0}],a,"A"),function(e){const a=t("cvP"),{ctx:i,w:l,h:r}=f(a),c=l/2,d=r/2,p=Math.min(l,r)/2-30;if(i.font="11px "+h.font,"dc"===n.mode){let e=0;o.poles.forEach((([t,a])=>{e=Math.max(e,Math.abs(t),Math.abs(a))})),e>0||(e=1),e*=1.25;const a=p/e,n=t=>c+t*a*.9+.3*p,s=t=>d-t*a,u=n(0);return i.strokeStyle=h.line,i.lineWidth=1,i.beginPath(),i.moveTo(14,d),i.lineTo(l-14,d),i.moveTo(u,14),i.lineTo(u,r-14),i.stroke(),i.fillStyle=h.muted,i.textAlign="left",i.textBaseline="bottom",i.fillText("jω",u+5,22),i.textAlign="right",i.textBaseline="top",i.fillText("σ",l-14,d+4),i.fillStyle=h.accent,i.globalAlpha=.07,i.fillRect(u,14,l-14-u,r-28),i.globalAlpha=1,i.fillStyle=h.muted,i.textAlign="right",i.textBaseline="bottom",i.fillText("unstable side",l-18,r-16),o.zeta<1&&(i.strokeStyle=h.muted,i.setLineDash([3,4]),i.beginPath(),i.arc(u,d,o.w0*a,Math.PI/2,1.5*Math.PI),i.stroke(),i.setLineDash([])),i.strokeStyle=h.accent,i.lineWidth=2.4,o.poles.forEach((([t,e],a)=>{const o=n(t),r=s(e);i.beginPath(),i.moveTo(o-6,r-6),i.lineTo(o+6,r+6),i.moveTo(o+6,r-6),i.lineTo(o-6,r+6),i.stroke(),i.fillStyle=h.ink,i.textAlign="center",i.textBaseline=e>0||0===e&&0===a?"bottom":"top";const c=+t.toPrecision(3)+(e?(e>0?" + j":" − j")+ +Math.abs(e).toPrecision(3):"");i.fillText(c,Math.min(Math.max(o,60),l-60),r+(e>0||0===e&&0===a?-10:10))})),void(t("pNote").textContent="Roots of s² + (R/L)s + 1/(LC) = 0, in s⁻¹. Distance left of the axis sets how fast the response decays; height sets the ringing frequency. Dashed arc: radius ω₀.")}if(!(o.Z>1e-12))return i.fillStyle=h.muted,i.textAlign="center",i.fillText("Z = 0 at resonance with R = 0: current grows without limit.",c,d),void(t("pNote").textContent="");const m=s.t[e],v=o.w*m,y=v-o.phi,x=Math.abs(n.V),M=(o.VRp,Math.max(o.VLp,o.VCp),p/Math.max(x,o.VRp,o.VLp,o.VCp,Math.hypot(o.VRp,Math.max(o.VLp,o.VCp)))*.95);i.strokeStyle=h.grid,i.lineWidth=1,i.beginPath(),i.arc(c,d,x*M,0,7),i.stroke(),i.strokeStyle=h.line,i.beginPath(),i.moveTo(10,d),i.lineTo(l-10,d),i.moveTo(c,10),i.lineTo(c,r-10),i.stroke();const b=(t,e)=>[t*M*Math.cos(e),-t*M*Math.sin(e)],C=Math.sign(n.V)||1,w=b(o.VRp,y),L=b(o.VLp,y+Math.PI/2),V=b(o.VCp,y-Math.PI/2),k=b(x,v);C<0&&[w,L,V,k].forEach((t=>{t[0]=-t[0],t[1]=-t[1]}));const R=.55*p,P=[R*Math.cos(y)*C,-R*Math.sin(y)*C];i.setLineDash([4,3]),g(i,c,d,c+P[0],d+P[1],h.i,1.6,"I"),i.setLineDash([]),g(i,c,d,c+w[0],d+w[1],h.r,2.4,"VR"),g(i,c+w[0],d+w[1],c+w[0]+L[0],d+w[1]+L[1],h.l,2.4,"VL"),g(i,c+w[0]+L[0],d+w[1]+L[1],c+w[0]+L[0]+V[0],d+w[1]+L[1]+V[1],h.c,2.4,"VC"),g(i,c,d,c+k[0],d+k[1],h.src,3,"V"),i.strokeStyle=h.src,i.globalAlpha=.5,i.setLineDash([2,3]),i.lineWidth=1,i.beginPath(),i.moveTo(c+k[0],d+k[1]),i.lineTo(c,d+k[1]),i.stroke(),i.setLineDash([]),i.globalAlpha=1,t("pNote").textContent="Steady-state phasors rotating at ω. VR + VL + VC add tip-to-tail to V; each vertical projection is that voltage's instantaneous value. φ = "+u(o.phi).toFixed(1)+"°."}(a),function(e){const a=.5*n.L*s.i[e]**2,o=.5*n.C*s.vc[e]**2,i=s.maxStored||1,l=s.maxCum||1;t("eL").textContent=p(a,"J"),t("eC").textContent=p(o,"J"),t("eS").textContent=p(s.eS[e],"J"),t("eH").textContent=p(s.eH[e],"J"),t("bL").style.width=100*a/i+"%",t("bC").style.width=100*o/i+"%",t("bS").style.width=100*Math.max(0,s.eS[e])/l+"%",t("bH").style.width=100*s.eH[e]/l+"%"}(a),r&&(!function(){const e=t("cvF"),{ctx:a,w:s,h:i}=f(e),l=56,r=12,c=s-l-12,d=i-r-26,u=Math.log10(o.f0)-2,v=Math.log10(o.f0)+2,g=360,y=Math.abs(n.V),x=[];let M=0;for(let t=0;t<g;t++){const e=Math.pow(10,u+(v-u)*t/359),a=2*Math.PI*e,o=y/Math.hypot(n.R,a*n.L-1/(a*n.C));x.push(o),o>M&&(M=o)}n.R>0&&(M=Math.max(M,y/n.R));const b=m(1.05*M,5),C=Math.ceil(1.05*M/b)*b,w=t=>l+c*(t-u)/(v-u),L=t=>r+d-Math.min(t,C)/C*d;a.fillStyle=h.scope,a.fillRect(l,r,c,d),a.font="11px "+h.font,a.lineWidth=1,a.textAlign="right",a.textBaseline="middle";for(let t=0;t<=1.0001*C;t+=b){const e=Math.round(L(t))+.5;a.strokeStyle=h.grid,a.beginPath(),a.moveTo(l,e),a.lineTo(l+c,e),a.stroke(),a.fillStyle=h.muted,a.fillText(p(t,"A",2),50,e)}a.textAlign="center",a.textBaseline="top";for(let t=Math.ceil(u);t<=Math.floor(v);t++){const e=Math.round(w(t))+.5;a.strokeStyle=h.grid,a.beginPath(),a.moveTo(e,r),a.lineTo(e,r+d),a.stroke(),a.fillStyle=h.muted,a.fillText(p(Math.pow(10,t),"Hz",2),e,r+d+6)}a.strokeStyle=h.line,a.strokeRect(56.5,12.5,c-1,d-1),a.save(),a.beginPath(),a.rect(l,r,c,d),a.clip(),a.beginPath(),a.moveTo(w(u),L(0));for(let t=0;t<g;t++)a.lineTo(w(u+(v-u)*t/359),L(x[t]));a.lineTo(w(v),L(0)),a.closePath(),a.fillStyle=h.i,a.globalAlpha=.12,a.fill(),a.globalAlpha=1,a.beginPath();for(let t=0;t<g;t++){const e=w(u+(v-u)*t/359),n=L(x[t]);t?a.lineTo(e,n):a.moveTo(e,n)}if(a.strokeStyle=h.i,a.lineWidth=2,a.stroke(),n.R>0){const t=L(y/n.R/Math.SQRT2);a.setLineDash([4,4]),a.strokeStyle=h.muted,a.lineWidth=1,a.beginPath(),a.moveTo(l,t),a.lineTo(l+c,t),a.stroke(),a.setLineDash([])}const V=w(Math.log10(o.f0));if(a.strokeStyle=h.accent,a.setLineDash([2,3]),a.beginPath(),a.moveTo(V,r),a.lineTo(V,r+d),a.stroke(),a.setLineDash([]),a.fillStyle=h.accent,a.textAlign="left",a.textBaseline="top",a.fillText("f₀ "+p(o.f0,"Hz"),V+5,16),"ac"===n.mode){const t=Math.log10(n.f);if(t>=u&&t<=v){const e=w(t),n=L(o.Ipk);a.fillStyle=h.src,a.beginPath(),a.arc(e,n,5,0,7),a.fill(),a.textAlign=e>l+.7*c?"right":"left",a.textBaseline="bottom",a.fillText("your f",e+(e>l+.7*c?-8:8),n-6)}}a.restore()}(),r=!1),t("scrub").value=Math.round(1e3*i.t/s.tEnd),t("clock").textContent="t = "+p(s.t[a],"s")+" / "+p(s.tEnd,"s")}function w(c){const h=t("src-ac").checked;t("row-f").hidden=!h,t("row-rest").hidden=!h,t("lab-V").textContent=h?"Peak voltage Vm":"Supply voltage",t("srcDC").setAttribute("display",h?"none":"inline"),t("srcAC").setAttribute("display",h?"inline":"none"),t("pTitle").textContent=h?"Phasor diagram":"Poles in the s-plane";const{p:d,errs:f}=function(){const e=t("src-ac").checked?"ac":"dc",a=parseFloat(t("in-R").value),n=.001*parseFloat(t("in-L").value),o=1e-6*parseFloat(t("in-C").value),s=parseFloat(t("in-V").value),i=parseFloat(t("in-f").value),l=t("in-rest").checked,r=[];return a>=0||r.push("Resistance must be 0 Ω or more."),n>0||r.push("Inductance must be greater than 0."),o>0||r.push("Capacitance must be greater than 0."),isFinite(s)&&0!==s||r.push("Enter a non-zero voltage."),"ac"!==e||i>0||r.push("Frequency must be greater than 0 Hz."),{p:{mode:e,R:a,L:n,C:o,V:s,f:i,rest:l},errs:r}}(),m=t("err");if(f.length)return m.textContent=f.join(" "),void(m.hidden=!1);m.hidden=!0;const v=s?i.t/s.tEnd:0;n=d,o=function(t){const e={};if(e.alpha=t.R/(2*t.L),e.w0=1/Math.sqrt(t.L*t.C),e.f0=e.w0/(2*Math.PI),e.zeta=e.alpha/e.w0,e.Q=t.R>0?e.w0*t.L/t.R:1/0,0===t.R?e.type="Undamped":Math.abs(e.zeta-1)<.005?e.type="Critically damped":e.zeta<1?e.type="Underdamped":e.type="Overdamped",e.zeta<1)e.wd=Math.sqrt(e.w0*e.w0-e.alpha*e.alpha),e.poles=[[-e.alpha,e.wd],[-e.alpha,-e.wd]],e.slow=e.alpha;else{const t=Math.sqrt(Math.max(0,e.alpha*e.alpha-e.w0*e.w0));e.poles=[[-e.alpha+t,0],[-e.alpha-t,0]],e.slow=e.alpha-t,e.fast=e.alpha+t}return"ac"===t.mode&&(e.w=2*Math.PI*t.f,e.XL=e.w*t.L,e.XC=1/(e.w*t.C),e.X=e.XL-e.XC,e.Z=Math.hypot(t.R,e.X),e.phi=Math.atan2(e.X,t.R),e.Ipk=Math.abs(t.V)/e.Z,e.Irms=e.Ipk/Math.SQRT2,e.VRp=e.Ipk*t.R,e.VLp=e.Ipk*e.XL,e.VCp=e.Ipk*e.XC,e.Pavg=e.Irms*e.Irms*t.R,e.pf=e.Z>0?t.R/e.Z:1,e.BW=t.R/(2*Math.PI*t.L)),e}(d),s=function(t,a){let n;if("dc"===t.mode)if(a.zeta<1){const t=2*Math.PI/a.wd;n=a.alpha>0?Math.min(Math.max(5/a.alpha,2*t),12*t):6*t}else n=5/Math.max(a.slow,1e-30);else{const e=1/t.f,o=a.alpha>0?5/a.alpha:1/0,s=!t.rest&&a.Z>1e-12;n=s?6*e:Math.min(Math.max(o,6*e),40*e),s||a.alpha>0||(n=Math.max(n,12*Math.PI/a.w0))}const{R:o,L:s}=t,i=t.C,l=t.V,r=a.w||0,c="dc"===t.mode,h=t=>c?l:l*Math.sin(r*t),d=n/(e-1),p=Math.max(2*a.alpha,a.w0,r),u=Math.min(400,Math.max(1,Math.ceil(d*p/.05))),f=d/u,m=-f/2,v=f/(2*s*i),g=1+f*o/(2*s),y=g-m*v,x=-f/(2*s*i),M=1-f*o/(2*s),b=f/(2*s);let C=0,w=0;if(!c&&!t.rest&&a.Z>1e-12){const t=l/a.Z;w=t*Math.sin(-a.phi),C=-t*Math.cos(-a.phi)/r}const L={t:new Float64Array(e),vs:new Float64Array(e),i:new Float64Array(e),q:new Float64Array(e),vr:new Float64Array(e),vl:new Float64Array(e),vc:new Float64Array(e),eS:new Float64Array(e),eH:new Float64Array(e),tEnd:n,dt:d};let V=0,k=0;for(let t=0;t<e;t++){const a=t*d,n=h(a);if(L.t[t]=a,L.vs[t]=n,L.i[t]=w,L.q[t]=C,L.vr[t]=o*w,L.vc[t]=C/i,L.vl[t]=n-o*w-C/i,t>0&&(V+=.5*(L.vs[t-1]*L.i[t-1]+n*w)*d,k+=.5*o*(L.i[t-1]*L.i[t-1]+w*w)*d),L.eS[t]=V,L.eH[t]=k,t===e-1)break;for(let t=0;t<u;t++){const e=a+t*f,n=e+f,o=C+f/2*w,s=x*C+M*w+b*(h(e)+h(n));C=(g*o-m*s)/y,w=(-v*o+s)/y}}const R=t=>{let e=0;for(let a=0;a<t.length;a++){const n=Math.abs(t[a]);n>e&&(e=n)}return e};L.max={vs:R(L.vs),vr:R(L.vr),vl:R(L.vl),vc:R(L.vc),i:R(L.i),q:R(L.q)};let P=0;for(let t=0;t<e;t++){const e=.5*s*L.i[t]*L.i[t]+.5*i*L.vc[t]*L.vc[t];e>P&&(P=e)}L.maxStored=P,L.maxCum=Math.max(R(L.eS),R(L.eH));let T=-1/0;for(let t=0;t<e;t++){const e=L.vc[t]*Math.sign(l);e>T&&(T=e)}return L.vcPeak=T,L}(d,o),t("tR").textContent="R = "+p(d.R,"Ω"),t("tL").textContent="L = "+p(d.L,"H"),t("tC").textContent="C = "+p(d.C,"F"),t("tS").textContent=h?"Vm = "+p(d.V,"V")+", "+p(d.f,"Hz"):"V = "+p(d.V,"V"),t("eNote").textContent="dc"===d.mode?"A DC step always ends with the source having supplied CV² = "+p(d.C*d.V*d.V,"J")+". Half is stored in the capacitor and half becomes heat, whatever the value of R.":"Over each steady cycle the stored energy swaps between L and C, and all the energy the source supplies on average ends up as heat in R.",function(e,a,n){const o=[];if("dc"===e.mode){o.push(["Response",'<span class="pill">'+a.type+"</span>","ζ = "+ +a.zeta.toPrecision(3)]),o.push(["Natural frequency f₀",p(a.f0,"Hz"),"ω₀ = 1/√(LC) = "+p(a.w0,"rad/s")]),o.push(["Damping rate α",p(a.alpha,"s⁻¹"),"α = R / 2L"]),a.zeta<1?o.push(["Ringing frequency",p(a.wd/(2*Math.PI),"Hz"),"ωd = √(ω₀² − α²)"]):o.push(["Root magnitudes",p(a.slow,"s⁻¹")+" · "+p(a.fast,"s⁻¹"),"slow and fast decay rates"]),o.push(["Peak current",p(n.max.i,"A"),"final current → 0 A"]);const t=100*(n.vcPeak/Math.abs(e.V)-1);o.push(["Max capacitor voltage",p(n.vcPeak*Math.sign(e.V),"V"),t>.05?"overshoot "+t.toFixed(1)+" %":"no overshoot"]),o.push(["Settling time (2 %)",a.slow>0?p(4/a.slow,"s"):"never","vC → "+p(e.V,"V")]),o.push(["Quality factor Q",isFinite(a.Q)?+a.Q.toPrecision(3)+"":"∞","Q = ω₀L / R"])}else{const t=Math.abs(a.X)<1e-9*Math.max(a.XL,1e-12)||Math.abs(e.f-a.f0)/a.f0<.005?"At resonance":a.X>0?"Inductive · i lags v":"Capacitive · i leads v";o.push(["Behaviour",'<span class="pill">'+t+"</span>","f₀ = "+p(a.f0,"Hz")]),o.push(["Inductive reactance XL",p(a.XL,"Ω"),"XL = 2πfL"]),o.push(["Capacitive reactance XC",p(a.XC,"Ω"),"XC = 1 / 2πfC"]),o.push(["Impedance |Z|",p(a.Z,"Ω"),"√(R² + (XL − XC)²)"]),o.push(["Phase angle φ",+u(a.phi).toFixed(2)+"°","voltage relative to current"]),o.push(["Current",p(a.Ipk,"A")+" pk",p(a.Irms,"A")+" rms"]),o.push(["Part voltages (peak)","",'<span style="color:var(--c-r)">R '+p(a.VRp,"V")+'</span> · <span style="color:var(--c-l)">L '+p(a.VLp,"V")+'</span> · <span style="color:var(--c-c)">C '+p(a.VCp,"V")+"</span>"]),o.push(["Average power",p(a.Pavg,"W"),"power factor "+a.pf.toFixed(3)]),o.push(["Q factor · bandwidth",(isFinite(a.Q)?+a.Q.toPrecision(3):"∞")+" · "+p(a.BW,"Hz"),"BW = R / 2πL"])}t("figures").innerHTML=o.map((([t,e,a])=>'<div class="fig"><small>'+t+"</small>"+(e?e.startsWith('<span class="pill')?e:"<b>"+e+"</b>":"")+"<small>"+a+"</small></div>")).join("")}(d,o,s),function(e,a){let n;if("dc"===e.mode){const t="<strong>At t = 0 the switch closes.</strong> The inductor resists the sudden change, so the whole supply voltage first appears across L and the current starts at zero. ";n="Underdamped"===a.type?t+"Energy sloshes between the inductor and capacitor, so vC overshoots "+p(e.V,"V")+" and rings at about "+p(a.wd/(2*Math.PI),"Hz")+" while R bleeds the oscillation away.":"Undamped"===a.type?t+"With no resistance nothing removes energy, so the circuit rings forever at f₀ = "+p(a.f0,"Hz")+" and vC swings between 0 and twice the supply.":"Critically damped"===a.type?t+"R = 2√(L/C): the fastest approach to "+p(e.V,"V")+" without overshoot.":t+"R is large enough that there is no ringing; vC creeps up to "+p(e.V,"V")+" and the current dies away."}else n="<strong>Sine supply at "+p(e.f,"Hz")+".</strong> ",e.rest&&(n+="The run starts from rest, so the first cycles mix the forced response with the circuit's own decaying ringing at f₀ = "+p(a.f0,"Hz")+". "),n+=a.X>0?"XL is larger than XC, so the current lags the supply by "+Math.abs(u(a.phi)).toFixed(1)+"°.":a.X<0?"XC is larger than XL, so the current leads the supply by "+Math.abs(u(a.phi)).toFixed(1)+"°.":"XL equals XC: vL and vC cancel, the current is limited by R alone and is in phase with the supply.",(a.VLp>1.05*Math.abs(e.V)||a.VCp>1.05*Math.abs(e.V))&&(n+=" Note that vL or vC can exceed the supply voltage itself.");t("story").innerHTML=n}(d,o),!0===c||i.playing&&!1!==c?i.t=0:i.t=Math.min(1,v)*s.tEnd,a&&!i.playing&&!0===c&&(i.t=s.tEnd),r=!0,l=!0}["in-R","in-L","in-C","in-V","in-rest"].forEach((e=>t(e).addEventListener("input",(()=>w())))),t("in-f").addEventListener("input",(()=>{const e=parseFloat(t("in-f").value);e>0&&(t("in-fs").value=Math.log10(e)),w()})),t("in-fs").addEventListener("input",(()=>{const e=Math.pow(10,parseFloat(t("in-fs").value));t("in-f").value=+e.toPrecision(4),w()})),["src-dc","src-ac"].forEach((e=>t(e).addEventListener("change",(()=>w(!0)))));const L={under:{m:"dc",R:10,L:10,C:100,V:12},crit:{m:"dc",R:20,L:10,C:100,V:12},over:{m:"dc",R:60,L:10,C:100,V:12},lc:{m:"dc",R:0,L:10,C:100,V:12},res:{m:"ac",R:10,L:10,C:100,V:12,f:159.2},ind:{m:"ac",R:10,L:10,C:100,V:12,f:500},cap:{m:"ac",R:10,L:10,C:100,V:12,f:50}};t("presets").addEventListener("click",(e=>{const a=e.target.closest("[data-p]");if(!a)return;const n=L[a.dataset.p];t("ac"===n.m?"src-ac":"src-dc").checked=!0,t("in-R").value=n.R,t("in-L").value=n.L,t("in-C").value=n.C,t("in-V").value=n.V,n.f&&(t("in-f").value=n.f,t("in-fs").value=Math.log10(n.f)),"ac"===n.m&&(t("in-rest").checked=!0),w(!0)})),t("legend").addEventListener("click",(t=>{const e=t.target.closest("[data-k]");e&&(c[e.dataset.k]=!c[e.dataset.k],e.setAttribute("aria-pressed",c[e.dataset.k]),l=!0)})),t("bPlay").addEventListener("click",(()=>{i.playing=!i.playing,i.playing&&s&&i.t>=.999*s.tEnd&&(i.t=0),t("bPlay").textContent=i.playing?"Pause":"Play",l=!0})),t("bRestart").addEventListener("click",(()=>{i.t=0,l=!0})),t("scrub").addEventListener("input",(()=>{s&&(i.t=t("scrub").value/1e3*s.tEnd,l=!0)})),t("speed").addEventListener("change",(()=>{i.dur=parseFloat(t("speed").value),l=!0})),t("bPlay").textContent=i.playing?"Pause":"Play",d();new MutationObserver((()=>{d(),r=!0,l=!0})).observe(document.documentElement,{attributes:!0,attributeFilter:["data-theme"]}),window.matchMedia("(prefers-color-scheme: dark)").addEventListener("change",(()=>{d(),r=!0,l=!0})),new ResizeObserver((()=>{r=!0,l=!0})).observe(document.querySelector("main")),document.fonts&&document.fonts.ready&&document.fonts.ready.then((()=>{r=!0,l=!0})),w(!0),i.playing||(i.t=.6*s.tEnd);let V=performance.now();requestAnimationFrame((function t(e){const a=Math.min(.1,(e-V)/1e3);V=e,s&&i.playing&&(i.t+=a/i.dur*s.tEnd,i.t>s.tEnd&&(i.t=0),l=!0),l&&(C(),l=!1),requestAnimationFrame(t)}))}();</script>
+<script>
+(function(){
+const $=id=>document.getElementById(id);
+const N=1500;
+const reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+let P=null, A=null, S=null;
+const play={t:0,playing:!reduce,dur:8};
+let dirty=true, staticDirty=true;
+const show={vs:true,vr:true,vl:true,vc:true};
+let C={};
+function readColors(){
+  const cs=getComputedStyle(document.documentElement);
+  const g=n=>cs.getPropertyValue(n).trim();
+  C={ink:g('--ink'),muted:g('--muted'),line:g('--line'),grid:g('--grid'),scope:g('--scope'),panel:g('--panel'),
+     src:g('--c-src'),r:g('--c-r'),l:g('--c-l'),c:g('--c-c'),i:g('--c-i'),accent:g('--accent'),font:'IBM Plex Mono, ui-monospace, monospace'};
+}
+
+function fmt(x,u,d){
+  d=d||3;
+  if(!isFinite(x)) return '∞ '+u;
+  if(x===0) return '0 '+u;
+  const pre=[[1e9,'G'],[1e6,'M'],[1e3,'k'],[1,''],[1e-3,'m'],[1e-6,'µ'],[1e-9,'n'],[1e-12,'p']];
+  const ax=Math.abs(x);
+  for(const [s,p] of pre){ if(ax>=s*0.9995) return (+(x/s).toPrecision(d))+' '+p+u; }
+  return (+(x/1e-12).toPrecision(d))+' p'+u;
+}
+const deg=r=>(r*180/Math.PI);
+
+/* ---------- inputs ---------- */
+function readInputs(){
+  const mode=$('src-ac').checked?'ac':'dc';
+  const R=parseFloat($('in-R').value), L=parseFloat($('in-L').value)*1e-3, Cc=parseFloat($('in-C').value)*1e-6;
+  const V=parseFloat($('in-V').value), f=parseFloat($('in-f').value), rest=$('in-rest').checked;
+  const errs=[];
+  if(!(R>=0)) errs.push('Resistance must be 0 Ω or more.');
+  if(!(L>0)) errs.push('Inductance must be greater than 0.');
+  if(!(Cc>0)) errs.push('Capacitance must be greater than 0.');
+  if(!isFinite(V)||V===0) errs.push('Enter a non-zero voltage.');
+  if(mode==='ac'&&!(f>0)) errs.push('Frequency must be greater than 0 Hz.');
+  return {p:{mode,R,L,C:Cc,V,f,rest},errs};
+}
+
+function analyze(p){
+  const a={};
+  a.alpha=p.R/(2*p.L); a.w0=1/Math.sqrt(p.L*p.C); a.f0=a.w0/(2*Math.PI);
+  a.zeta=a.alpha/a.w0; a.Q=p.R>0?a.w0*p.L/p.R:Infinity;
+  if(p.R===0) a.type='Undamped';
+  else if(Math.abs(a.zeta-1)<0.005) a.type='Critically damped';
+  else if(a.zeta<1) a.type='Underdamped'; else a.type='Overdamped';
+  if(a.zeta<1){ a.wd=Math.sqrt(a.w0*a.w0-a.alpha*a.alpha); a.poles=[[-a.alpha,a.wd],[-a.alpha,-a.wd]]; a.slow=a.alpha; }
+  else { const r=Math.sqrt(Math.max(0,a.alpha*a.alpha-a.w0*a.w0)); a.poles=[[-a.alpha+r,0],[-a.alpha-r,0]]; a.slow=a.alpha-r; a.fast=a.alpha+r; }
+  if(p.mode==='ac'){
+    a.w=2*Math.PI*p.f; a.XL=a.w*p.L; a.XC=1/(a.w*p.C); a.X=a.XL-a.XC;
+    a.Z=Math.hypot(p.R,a.X); a.phi=Math.atan2(a.X,p.R);
+    a.Ipk=Math.abs(p.V)/a.Z; a.Irms=a.Ipk/Math.SQRT2;
+    a.VRp=a.Ipk*p.R; a.VLp=a.Ipk*a.XL; a.VCp=a.Ipk*a.XC;
+    a.Pavg=a.Irms*a.Irms*p.R; a.pf=a.Z>0?p.R/a.Z:1;
+    a.BW=p.R/(2*Math.PI*p.L);
+  }
+  return a;
+}
+
+function simulate(p,a){
+  let tEnd;
+  if(p.mode==='dc'){
+    if(a.zeta<1){ const Td=2*Math.PI/a.wd; tEnd = a.alpha>0 ? Math.min(Math.max(5/a.alpha,2*Td),12*Td) : 6*Td; }
+    else tEnd=Math.max(5/Math.max(a.slow,1e-30), 9/Math.max(a.alpha,1e-30));
+  } else {
+    const Tp=1/p.f; const tr=a.alpha>0?5/a.alpha:Infinity;
+    const steady=!p.rest && a.Z>1e-12;
+    tEnd = steady ? 6*Tp : Math.min(Math.max(tr,6*Tp),40*Tp);
+    if(!steady && !(a.alpha>0)) tEnd=Math.max(tEnd, 6*2*Math.PI/a.w0);
+  }
+  const {R,L}=p, Cc=p.C, V=p.V, w=a.w||0, dc=p.mode==='dc';
+  const vs=t=>dc?V:V*Math.sin(w*t);
+  const dt=tEnd/(N-1);
+  const rate=Math.max(2*a.alpha,a.w0,w);
+  const sub=Math.min(400,Math.max(1,Math.ceil(dt*rate/0.05)));
+  const h=dt/sub;
+  const m12=-h/2, m21=h/(2*L*Cc), m22=1+h*R/(2*L), det=m22-m12*m21;
+  const p21=-h/(2*L*Cc), p22=1-h*R/(2*L), kb=h/(2*L);
+  let q=0,i=0;
+  if(!dc && !p.rest && a.Z>1e-12){ const Ip=V/a.Z; i=Ip*Math.sin(-a.phi); q=-Ip*Math.cos(-a.phi)/w; }
+  const s={t:new Float64Array(N),vs:new Float64Array(N),i:new Float64Array(N),q:new Float64Array(N),vr:new Float64Array(N),vl:new Float64Array(N),vc:new Float64Array(N),eS:new Float64Array(N),eH:new Float64Array(N),tEnd,dt};
+  let eS=0,eH=0;
+  for(let n=0;n<N;n++){
+    const t=n*dt, v=vs(t);
+    s.t[n]=t; s.vs[n]=v; s.i[n]=i; s.q[n]=q; s.vr[n]=R*i; s.vc[n]=q/Cc; s.vl[n]=v-R*i-q/Cc;
+    if(n>0){ eS+=0.5*(s.vs[n-1]*s.i[n-1]+v*i)*dt; eH+=0.5*R*(s.i[n-1]*s.i[n-1]+i*i)*dt; }
+    s.eS[n]=eS; s.eH[n]=eH;
+    if(n===N-1) break;
+    for(let k=0;k<sub;k++){
+      const t0=t+k*h, t1=t0+h;
+      const r1=q+(h/2)*i, r2=p21*q+p22*i+kb*(vs(t0)+vs(t1));
+      q=(m22*r1-m12*r2)/det; i=(-m21*r1+r2)/det;
+    }
+  }
+  const mx=arr=>{let m=0;for(let k=0;k<arr.length;k++){const v=Math.abs(arr[k]);if(v>m)m=v;}return m;};
+  s.max={vs:mx(s.vs),vr:mx(s.vr),vl:mx(s.vl),vc:mx(s.vc),i:mx(s.i),q:mx(s.q)};
+  let es=0; for(let k=0;k<N;k++){const e=0.5*L*s.i[k]*s.i[k]+0.5*Cc*s.vc[k]*s.vc[k]; if(e>es) es=e;}
+  s.maxStored=es; s.maxCum=Math.max(mx(s.eS),mx(s.eH));
+  let vcMax=-Infinity; for(let k=0;k<N;k++){ const v=s.vc[k]*Math.sign(V); if(v>vcMax) vcMax=v; } s.vcPeak=vcMax;
+  return s;
+}
+
+/* ---------- figures ---------- */
+function figures(p,a,s){
+  const F=[];
+  if(p.mode==='dc'){
+    F.push(['Response','<span class="pill">'+a.type+'</span>','ζ = '+(+a.zeta.toPrecision(3))]);
+    F.push(['Natural frequency f₀',fmt(a.f0,'Hz'),'ω₀ = 1/√(LC) = '+fmt(a.w0,'rad/s')]);
+    F.push(['Damping rate α',fmt(a.alpha,'s⁻¹'),'α = R / 2L']);
+    if(a.zeta<1) F.push(['Ringing frequency',fmt(a.wd/(2*Math.PI),'Hz'),'ωd = √(ω₀² − α²)']);
+    else F.push(['Root magnitudes',fmt(a.slow,'s⁻¹')+' · '+fmt(a.fast,'s⁻¹'),'slow and fast decay rates']);
+    F.push(['Peak current',fmt(s.max.i,'A'),'final current → 0 A']);
+    const os=(s.vcPeak/Math.abs(p.V)-1)*100;
+    F.push(['Max capacitor voltage',fmt(s.vcPeak*Math.sign(p.V),'V'),os>0.05?'overshoot '+os.toFixed(1)+' %':'no overshoot']);
+    F.push(['Settling time (2 %)',a.slow>0?fmt(4/a.slow,'s'):'never','vC → '+fmt(p.V,'V')]);
+    F.push(['Quality factor Q',isFinite(a.Q)?(+a.Q.toPrecision(3))+'':'∞','Q = ω₀L / R']);
+  } else {
+    const res=Math.abs(a.X)<1e-9*Math.max(a.XL,1e-12)||Math.abs(p.f-a.f0)/a.f0<0.005;
+    const beh=res?'At resonance':(a.X>0?'Inductive · i lags v':'Capacitive · i leads v');
+    F.push(['Behaviour','<span class="pill">'+beh+'</span>','f₀ = '+fmt(a.f0,'Hz')]);
+    F.push(['Inductive reactance XL',fmt(a.XL,'Ω'),'XL = 2πfL']);
+    F.push(['Capacitive reactance XC',fmt(a.XC,'Ω'),'XC = 1 / 2πfC']);
+    F.push(['Impedance |Z|',fmt(a.Z,'Ω'),'√(R² + (XL − XC)²)']);
+    F.push(['Phase angle φ',(+deg(a.phi).toFixed(2))+'°','voltage relative to current']);
+    F.push(['Current',fmt(a.Ipk,'A')+' pk',fmt(a.Irms,'A')+' rms']);
+    F.push(['Part voltages (peak)','',
+      '<span style="color:var(--c-r)">R '+fmt(a.VRp,'V')+'</span> · <span style="color:var(--c-l)">L '+fmt(a.VLp,'V')+'</span> · <span style="color:var(--c-c)">C '+fmt(a.VCp,'V')+'</span>']);
+    F.push(['Average power',fmt(a.Pavg,'W'),'power factor '+a.pf.toFixed(3)]);
+    F.push(['Q factor · bandwidth',(isFinite(a.Q)?+a.Q.toPrecision(3):'∞')+' · '+fmt(a.BW,'Hz'),'BW = R / 2πL']);
+  }
+  $('figures').innerHTML=F.map(([k,v,n])=>'<div class="fig"><small>'+k+'</small>'+(v?(v.startsWith('<span class="pill')?v:'<b>'+v+'</b>'):'')+'<small>'+n+'</small></div>').join('');
+}
+
+function story(p,a){
+  let t;
+  if(p.mode==='dc'){
+    const base='<strong>At t = 0 the switch closes.</strong> The inductor resists the sudden change, so the whole supply voltage first appears across L and the current starts at zero. ';
+    if(a.type==='Underdamped') t=base+'Energy sloshes between the inductor and capacitor, so vC overshoots '+fmt(p.V,'V')+' and rings at about '+fmt(a.wd/(2*Math.PI),'Hz')+' while R bleeds the oscillation away.';
+    else if(a.type==='Undamped') t=base+'With no resistance nothing removes energy, so the circuit rings forever at f₀ = '+fmt(a.f0,'Hz')+' and vC swings between 0 and twice the supply.';
+    else if(a.type==='Critically damped') t=base+'R = 2√(L/C): the fastest approach to '+fmt(p.V,'V')+' without overshoot.';
+    else t=base+'R is large enough that there is no ringing; vC creeps up to '+fmt(p.V,'V')+' and the current dies away.';
+  } else {
+    t='<strong>Sine supply at '+fmt(p.f,'Hz')+'.</strong> ';
+    if(p.rest) t+='The run starts from rest, so the first cycles mix the forced response with the circuit\'s own decaying ringing at f₀ = '+fmt(a.f0,'Hz')+'. ';
+    t+= a.X>0?'XL is larger than XC, so the current lags the supply by '+Math.abs(deg(a.phi)).toFixed(1)+'°.' :
+        a.X<0?'XC is larger than XL, so the current leads the supply by '+Math.abs(deg(a.phi)).toFixed(1)+'°.' :
+        'XL equals XC: vL and vC cancel, the current is limited by R alone and is in phase with the supply.';
+    if(a.VLp>Math.abs(p.V)*1.05||a.VCp>Math.abs(p.V)*1.05) t+=' Note that vL or vC can exceed the supply voltage itself.';
+  }
+  $('story').innerHTML=t;
+}
+
+/* ---------- canvas helpers ---------- */
+function prep(cv){
+  const dpr=window.devicePixelRatio||1, w=cv.clientWidth, h=cv.clientHeight;
+  if(cv.width!==Math.round(w*dpr)||cv.height!==Math.round(h*dpr)){cv.width=Math.round(w*dpr);cv.height=Math.round(h*dpr);}
+  const ctx=cv.getContext('2d'); ctx.setTransform(dpr,0,0,dpr,0,0); ctx.clearRect(0,0,w,h);
+  return {ctx,w,h};
+}
+function niceStep(range,n){ const raw=range/n; const p=Math.pow(10,Math.floor(Math.log10(raw))); const m=raw/p; return (m<1.5?1:m<3?2:m<7?5:10)*p; }
+
+function drawScope(cv,series,idx,unit){
+  const {ctx,w,h}=prep(cv);
+  const ml=62,mr=12,mt=8,mb=24,pw=w-ml-mr,ph=h-mt-mb;
+  ctx.fillStyle=C.scope; ctx.fillRect(ml,mt,pw,ph);
+  let ym=0; series.forEach(s=>{if(s.on&&s.max>ym)ym=s.max;}); if(!(ym>0))ym=1;
+  const ys=niceStep(ym*2.1,6); const yl=Math.ceil(ym*1.04/ys)*ys;
+  const X=t=>ml+pw*t/S.tEnd, Y=v=>mt+ph/2-v/yl*ph/2;
+  ctx.font='11px '+C.font; ctx.textBaseline='middle';
+  ctx.lineWidth=1;
+  for(let v=-yl; v<=yl+ys*0.01; v+=ys){
+    const y=Math.round(Y(v))+0.5; ctx.strokeStyle=Math.abs(v)<ys*0.01?C.muted:C.grid; ctx.globalAlpha=Math.abs(v)<ys*0.01?0.6:1;
+    ctx.beginPath(); ctx.moveTo(ml,y); ctx.lineTo(ml+pw,y); ctx.stroke(); ctx.globalAlpha=1;
+    ctx.fillStyle=C.muted; ctx.textAlign='right'; ctx.fillText(fmt(Math.abs(v)<ys*0.01?0:v,unit,3),ml-6,y);
+  }
+  const xs=niceStep(S.tEnd,Math.max(3,Math.floor(pw/90)));
+  ctx.textAlign='center'; ctx.textBaseline='top';
+  for(let t=0;t<=S.tEnd*1.0001;t+=xs){
+    const x=Math.round(X(t))+0.5; ctx.strokeStyle=C.grid; ctx.beginPath(); ctx.moveTo(x,mt); ctx.lineTo(x,mt+ph); ctx.stroke();
+    ctx.fillStyle=C.muted; ctx.fillText(fmt(t,'s',3),x,mt+ph+6);
+  }
+  ctx.strokeStyle=C.line; ctx.strokeRect(ml+0.5,mt+0.5,pw-1,ph-1);
+  ctx.save(); ctx.beginPath(); ctx.rect(ml,mt,pw,ph); ctx.clip();
+  series.forEach(s=>{
+    if(!s.on) return;
+    ctx.strokeStyle=s.color; ctx.lineJoin='round';
+    ctx.globalAlpha=0.22; ctx.lineWidth=1.2; ctx.beginPath();
+    for(let k=0;k<N;k++){const x=X(S.t[k]),y=Y(s.d[k]); k?ctx.lineTo(x,y):ctx.moveTo(x,y);} ctx.stroke();
+    ctx.globalAlpha=1; ctx.lineWidth=2; ctx.beginPath();
+    for(let k=0;k<=idx;k++){const x=X(S.t[k]),y=Y(s.d[k]); k?ctx.lineTo(x,y):ctx.moveTo(x,y);} ctx.stroke();
+  });
+  const px=X(S.t[idx]);
+  ctx.strokeStyle=C.ink; ctx.globalAlpha=0.35; ctx.lineWidth=1; ctx.setLineDash([3,3]);
+  ctx.beginPath(); ctx.moveTo(px,mt); ctx.lineTo(px,mt+ph); ctx.stroke(); ctx.setLineDash([]); ctx.globalAlpha=1;
+  series.forEach(s=>{ if(!s.on) return; ctx.fillStyle=s.color; ctx.beginPath(); ctx.arc(px,Y(s.d[idx]),3.5,0,7); ctx.fill(); });
+  ctx.restore();
+}
+
+function arrow(ctx,x0,y0,x1,y1,col,lw,label){
+  const ang=Math.atan2(y1-y0,x1-x0), len=Math.hypot(x1-x0,y1-y0);
+  ctx.strokeStyle=col; ctx.fillStyle=col; ctx.lineWidth=lw;
+  ctx.beginPath(); ctx.moveTo(x0,y0); ctx.lineTo(x1,y1); ctx.stroke();
+  if(len>6){ const hl=Math.min(10,len*0.4); ctx.beginPath(); ctx.moveTo(x1,y1);
+    ctx.lineTo(x1-hl*Math.cos(ang-0.4),y1-hl*Math.sin(ang-0.4)); ctx.lineTo(x1-hl*Math.cos(ang+0.4),y1-hl*Math.sin(ang+0.4)); ctx.closePath(); ctx.fill(); }
+  if(label){ ctx.font='500 12px '+C.font; ctx.textAlign='center'; ctx.textBaseline='middle';
+    ctx.fillText(label,x1+14*Math.cos(ang),y1+14*Math.sin(ang)); }
+}
+
+function drawPhasor(idx){
+  const cv=$('cvP'); const {ctx,w,h}=prep(cv);
+  const cx=w/2, cy=h/2, R0=Math.min(w,h)/2-30;
+  ctx.font='11px '+C.font;
+  if(P.mode==='dc'){
+    // s-plane
+    let m=0; A.poles.forEach(([re,im])=>{m=Math.max(m,Math.abs(re),Math.abs(im));}); if(!(m>0)) m=1; m*=1.25;
+    const sc=R0/m, X=re=>cx+re*sc*0.9+R0*0.3, Y=im=>cy-im*sc;
+    const ox=X(0);
+    ctx.strokeStyle=C.line; ctx.lineWidth=1;
+    ctx.beginPath(); ctx.moveTo(14,cy); ctx.lineTo(w-14,cy); ctx.moveTo(ox,14); ctx.lineTo(ox,h-14); ctx.stroke();
+    ctx.fillStyle=C.muted; ctx.textAlign='left'; ctx.textBaseline='bottom'; ctx.fillText('jω',ox+5,22);
+    ctx.textAlign='right'; ctx.textBaseline='top'; ctx.fillText('σ',w-14,cy+4);
+    ctx.fillStyle=C.accent; ctx.globalAlpha=0.07; ctx.fillRect(ox,14,w-14-ox,h-28); ctx.globalAlpha=1;
+    ctx.fillStyle=C.muted; ctx.textAlign='right'; ctx.textBaseline='bottom'; ctx.fillText('unstable side',w-18,h-16);
+    if(A.zeta<1){ ctx.strokeStyle=C.muted; ctx.setLineDash([3,4]); ctx.beginPath(); ctx.arc(ox,cy,A.w0*sc,Math.PI/2,Math.PI*1.5); ctx.stroke(); ctx.setLineDash([]); }
+    ctx.strokeStyle=C.accent; ctx.lineWidth=2.4;
+    A.poles.forEach(([re,im],k)=>{ const x=X(re),y=Y(im),s=6; ctx.beginPath(); ctx.moveTo(x-s,y-s); ctx.lineTo(x+s,y+s); ctx.moveTo(x+s,y-s); ctx.lineTo(x-s,y+s); ctx.stroke();
+      ctx.fillStyle=C.ink; ctx.textAlign='center'; ctx.textBaseline=(im>0||(im===0&&k===0))?'bottom':'top';
+      const lab=(+re.toPrecision(3))+(im?(im>0?' + j':' − j')+(+Math.abs(im).toPrecision(3)):'');
+      ctx.fillText(lab, Math.min(Math.max(x,60),w-60), y+((im>0||(im===0&&k===0))?-10:10)); });
+    $('pNote').textContent='Roots of s² + (R/L)s + 1/(LC) = 0, in s⁻¹. Distance left of the axis sets how fast the response decays; height sets the ringing frequency. Dashed arc: radius ω₀.';
+    return;
+  }
+  if(!(A.Z>1e-12)){ ctx.fillStyle=C.muted; ctx.textAlign='center'; ctx.fillText('Z = 0 at resonance with R = 0: current grows without limit.',cx,cy); $('pNote').textContent=''; return; }
+  const t=S.t[idx], th=A.w*t, thI=th-A.phi;
+  const Vm=Math.abs(P.V);
+  const sum=A.VRp+Math.max(A.VLp,A.VCp);
+  const sc=R0/Math.max(Vm,A.VRp,A.VLp,A.VCp, Math.hypot(A.VRp,Math.max(A.VLp,A.VCp)) )*0.95;
+  ctx.strokeStyle=C.grid; ctx.lineWidth=1;
+  ctx.beginPath(); ctx.arc(cx,cy,Vm*sc,0,7); ctx.stroke();
+  ctx.strokeStyle=C.line; ctx.beginPath(); ctx.moveTo(10,cy); ctx.lineTo(w-10,cy); ctx.moveTo(cx,10); ctx.lineTo(cx,h-10); ctx.stroke();
+  const pt=(m,a)=>[m*sc*Math.cos(a),-m*sc*Math.sin(a)];
+  const sg=Math.sign(P.V)||1;
+  const vR=pt(A.VRp,thI), vL=pt(A.VLp,thI+Math.PI/2), vC=pt(A.VCp,thI-Math.PI/2), vS=pt(Vm,th);
+  if(sg<0){[vR,vL,vC,vS].forEach(v=>{v[0]=-v[0];v[1]=-v[1];});}
+  // current phasor
+  const iL=R0*0.55, iv=[iL*Math.cos(thI)*sg,-iL*Math.sin(thI)*sg];
+  ctx.setLineDash([4,3]); arrow(ctx,cx,cy,cx+iv[0],cy+iv[1],C.i,1.6,'I'); ctx.setLineDash([]);
+  arrow(ctx,cx,cy,cx+vR[0],cy+vR[1],C.r,2.4,'VR');
+  arrow(ctx,cx+vR[0],cy+vR[1],cx+vR[0]+vL[0],cy+vR[1]+vL[1],C.l,2.4,'VL');
+  arrow(ctx,cx+vR[0]+vL[0],cy+vR[1]+vL[1],cx+vR[0]+vL[0]+vC[0],cy+vR[1]+vL[1]+vC[1],C.c,2.4,'VC');
+  arrow(ctx,cx,cy,cx+vS[0],cy+vS[1],C.src,3,'V');
+  ctx.strokeStyle=C.src; ctx.globalAlpha=0.5; ctx.setLineDash([2,3]); ctx.lineWidth=1;
+  ctx.beginPath(); ctx.moveTo(cx+vS[0],cy+vS[1]); ctx.lineTo(cx,cy+vS[1]); ctx.stroke(); ctx.setLineDash([]); ctx.globalAlpha=1;
+  $('pNote').textContent='Steady-state phasors rotating at ω. VR + VL + VC add tip-to-tail to V; each vertical projection is that voltage\'s instantaneous value. φ = '+deg(A.phi).toFixed(1)+'°.';
+}
+
+function drawFreq(){
+  const cv=$('cvF'); const {ctx,w,h}=prep(cv);
+  const ml=56,mr=12,mt=12,mb=26,pw=w-ml-mr,ph=h-mt-mb;
+  const lo=Math.log10(A.f0)-2, hi=Math.log10(A.f0)+2, M=360;
+  const Vm=Math.abs(P.V), I=[];
+  let imax=0;
+  for(let k=0;k<M;k++){ const f=Math.pow(10,lo+(hi-lo)*k/(M-1)), w2=2*Math.PI*f; const Z=Math.hypot(P.R,w2*P.L-1/(w2*P.C)); const v=Vm/Z; I.push(v); if(v>imax)imax=v; }
+  if(P.R>0) imax=Math.max(imax,Vm/P.R);
+  const ys=niceStep(imax*1.05,5), yl=Math.ceil(imax*1.05/ys)*ys;
+  const X=lf=>ml+pw*(lf-lo)/(hi-lo), Y=v=>mt+ph-Math.min(v,yl)/yl*ph;
+  ctx.fillStyle=C.scope; ctx.fillRect(ml,mt,pw,ph);
+  ctx.font='11px '+C.font; ctx.lineWidth=1;
+  ctx.textAlign='right'; ctx.textBaseline='middle';
+  for(let v=0;v<=yl*1.0001;v+=ys){ const y=Math.round(Y(v))+0.5; ctx.strokeStyle=C.grid; ctx.beginPath(); ctx.moveTo(ml,y); ctx.lineTo(ml+pw,y); ctx.stroke(); ctx.fillStyle=C.muted; ctx.fillText(fmt(v,'A',2),ml-6,y); }
+  ctx.textAlign='center'; ctx.textBaseline='top';
+  for(let d=Math.ceil(lo);d<=Math.floor(hi);d++){ const x=Math.round(X(d))+0.5; ctx.strokeStyle=C.grid; ctx.beginPath(); ctx.moveTo(x,mt); ctx.lineTo(x,mt+ph); ctx.stroke(); ctx.fillStyle=C.muted; ctx.fillText(fmt(Math.pow(10,d),'Hz',2),x,mt+ph+6); }
+  ctx.strokeStyle=C.line; ctx.strokeRect(ml+0.5,mt+0.5,pw-1,ph-1);
+  ctx.save(); ctx.beginPath(); ctx.rect(ml,mt,pw,ph); ctx.clip();
+  // area
+  ctx.beginPath(); ctx.moveTo(X(lo),Y(0));
+  for(let k=0;k<M;k++) ctx.lineTo(X(lo+(hi-lo)*k/(M-1)),Y(I[k]));
+  ctx.lineTo(X(hi),Y(0)); ctx.closePath(); ctx.fillStyle=C.i; ctx.globalAlpha=0.12; ctx.fill(); ctx.globalAlpha=1;
+  ctx.beginPath(); for(let k=0;k<M;k++){ const x=X(lo+(hi-lo)*k/(M-1)),y=Y(I[k]); k?ctx.lineTo(x,y):ctx.moveTo(x,y);} ctx.strokeStyle=C.i; ctx.lineWidth=2; ctx.stroke();
+  if(P.R>0){ const y=Y(Vm/P.R/Math.SQRT2); ctx.setLineDash([4,4]); ctx.strokeStyle=C.muted; ctx.lineWidth=1; ctx.beginPath(); ctx.moveTo(ml,y); ctx.lineTo(ml+pw,y); ctx.stroke(); ctx.setLineDash([]); }
+  const x0=X(Math.log10(A.f0)); ctx.strokeStyle=C.accent; ctx.setLineDash([2,3]); ctx.beginPath(); ctx.moveTo(x0,mt); ctx.lineTo(x0,mt+ph); ctx.stroke(); ctx.setLineDash([]);
+  ctx.fillStyle=C.accent; ctx.textAlign='left'; ctx.textBaseline='top'; ctx.fillText('f₀ '+fmt(A.f0,'Hz'),x0+5,mt+4);
+  if(P.mode==='ac'){ const lf=Math.log10(P.f); if(lf>=lo&&lf<=hi){ const x=X(lf), y=Y(A.Ipk); ctx.fillStyle=C.src; ctx.beginPath(); ctx.arc(x,y,5,0,7); ctx.fill();
+    ctx.textAlign=x>ml+pw*0.7?'right':'left'; ctx.textBaseline='bottom'; ctx.fillText('your f',x+(x>ml+pw*0.7?-8:8),y-6);} }
+  ctx.restore();
+}
+
+/* ---------- circuit ---------- */
+const loop=$('loop'), LEN=loop.getTotalLength(), ND=30, dots=[];
+for(let k=0;k<ND;k++){ const c=document.createElementNS('http://www.w3.org/2000/svg','circle'); c.setAttribute('r','3.6'); c.setAttribute('class','dot'); $('dots').appendChild(c); dots.push(c); }
+function drawCircuit(idx){
+  const i=S.i[idx], q=S.q[idx];
+  const kq=S.max.i>0?160/(S.max.i*(S.tEnd/play.dur)):0;
+  let off=(q*kq)%LEN; if(off<0) off+=LEN;
+  const sp=LEN/ND;
+  for(let k=0;k<ND;k++){
+    const pt=loop.getPointAtLength((k*sp+off)%LEN);
+    dots[k].setAttribute('cx',pt.x.toFixed(1)); dots[k].setAttribute('cy',pt.y.toFixed(1));
+    const inGap=(pt.x>495&&pt.y>141&&pt.y<159)||(P.mode==='dc'&&pt.x<65&&pt.y>141&&pt.y<159);
+    dots[k].style.opacity=inGap?0:(S.max.i>0?0.35+0.65*Math.min(1,Math.abs(i)/S.max.i):0.35);
+  }
+  const ir=S.max.i>0?Math.abs(i)/S.max.i:0;
+  $('gR').style.opacity=(0.4*ir*ir).toFixed(3);
+  $('gL').style.opacity=(0.3*ir).toFixed(3);
+  const qr=S.max.q>0?q/S.max.q:0;
+  $('fC').style.opacity=(0.45*Math.abs(qr)).toFixed(3);
+  $('qTop').textContent=qr>=0?'+':'−'; $('qBot').textContent=qr>=0?'−':'+';
+  $('qTop').style.opacity=$('qBot').style.opacity=Math.abs(qr).toFixed(3);
+  $('vR').textContent='vR = '+fmt(S.vr[idx],'V');
+  $('vL').textContent='vL = '+fmt(S.vl[idx],'V');
+  $('vC').textContent='vC = '+fmt(S.vc[idx],'V');
+  $('vS').textContent='v = '+fmt(S.vs[idx],'V');
+  $('tI').textContent='i = '+fmt(i,'A');
+  const arr=$('arr'); arr.style.opacity=ir>0.02?1:0.15;
+  arr.setAttribute('transform', i<0?'rotate(180 278 250)':'');
+}
+function drawEnergy(idx){
+  const EL=0.5*P.L*S.i[idx]**2, EC=0.5*P.C*S.vc[idx]**2;
+  const st=S.maxStored||1, cu=S.maxCum||1;
+  $('eL').textContent=fmt(EL,'J'); $('eC').textContent=fmt(EC,'J');
+  $('eS').textContent=fmt(S.eS[idx],'J'); $('eH').textContent=fmt(S.eH[idx],'J');
+  $('bL').style.width=(100*EL/st)+'%'; $('bC').style.width=(100*EC/st)+'%';
+  $('bS').style.width=(100*Math.max(0,S.eS[idx])/cu)+'%'; $('bH').style.width=(100*S.eH[idx]/cu)+'%';
+}
+
+function render(){
+  if(!S) return;
+  const idx=Math.max(0,Math.min(N-1,Math.round(play.t/S.dt)));
+  drawCircuit(idx);
+  drawScope($('cvV'),[
+    {d:S.vs,max:S.max.vs,color:C.src,on:show.vs},{d:S.vr,max:S.max.vr,color:C.r,on:show.vr},
+    {d:S.vl,max:S.max.vl,color:C.l,on:show.vl},{d:S.vc,max:S.max.vc,color:C.c,on:show.vc}],idx,'V');
+  drawScope($('cvI'),[{d:S.i,max:S.max.i,color:C.i,on:true}],idx,'A');
+  drawPhasor(idx);
+  drawEnergy(idx);
+  if(staticDirty){ drawFreq(); staticDirty=false; }
+  $('scrub').value=Math.round(1000*play.t/S.tEnd);
+  $('clock').textContent='t = '+fmt(S.t[idx],'s')+' / '+fmt(S.tEnd,'s');
+  $('stateMsg').hidden=!(P.mode==='dc' && idx>=N-1);
+}
+
+/* ---------- wiring ---------- */
+function rebuild(reset){
+  const ac=$('src-ac').checked;
+  $('row-f').hidden=!ac; $('row-rest').hidden=!ac;
+  $('lab-V').textContent=ac?'Peak voltage Vm':'Supply voltage';
+  $('srcDC').setAttribute('display',ac?'none':'inline'); $('srcAC').setAttribute('display',ac?'inline':'none');
+  $('pTitle').textContent=ac?'Phasor diagram':'Poles in the s-plane';
+  const {p,errs}=readInputs();
+  const err=$('err');
+  if(errs.length){ err.textContent=errs.join(' '); err.hidden=false; return; }
+  err.hidden=true;
+  const frac=S?play.t/S.tEnd:0;
+  P=p; A=analyze(p); S=simulate(p,A);
+  $('tR').textContent='R = '+fmt(p.R,'Ω'); $('tL').textContent='L = '+fmt(p.L,'H'); $('tC').textContent='C = '+fmt(p.C,'F');
+  $('tS').textContent=ac?'Vm = '+fmt(p.V,'V')+', '+fmt(p.f,'Hz'):'V = '+fmt(p.V,'V');
+  $('eNote').textContent=p.mode==='dc'
+    ?'A DC step always ends with the source having supplied CV² = '+fmt(p.C*p.V*p.V,'J')+'. Half is stored in the capacitor and half becomes heat, whatever the value of R.'
+    :'Over each steady cycle the stored energy swaps between L and C, and all the energy the source supplies on average ends up as heat in R.';
+  figures(p,A,S); story(p,A);
+  if(reset===true||(play.playing&&reset!==false)) play.t=0; else play.t=Math.min(1,frac)*S.tEnd;
+  if(reduce&&!play.playing&&reset===true) play.t=S.tEnd;
+  staticDirty=true; dirty=true;
+}
+
+['in-R','in-L','in-C','in-V','in-rest'].forEach(id=>$(id).addEventListener('input',()=>rebuild()));
+$('in-f').addEventListener('input',()=>{ const f=parseFloat($('in-f').value); if(f>0) $('in-fs').value=Math.log10(f); rebuild(); });
+$('in-fs').addEventListener('input',()=>{ const f=Math.pow(10,parseFloat($('in-fs').value)); $('in-f').value=+f.toPrecision(4); rebuild(); });
+['src-dc','src-ac'].forEach(id=>$(id).addEventListener('change',()=>rebuild(true)));
+
+const presets={
+  under:{m:'dc',R:10,L:10,C:100,V:12}, crit:{m:'dc',R:20,L:10,C:100,V:12}, over:{m:'dc',R:60,L:10,C:100,V:12},
+  lc:{m:'dc',R:0,L:10,C:100,V:12}, res:{m:'ac',R:10,L:10,C:100,V:12,f:159.2},
+  ind:{m:'ac',R:10,L:10,C:100,V:12,f:500}, cap:{m:'ac',R:10,L:10,C:100,V:12,f:50}
+};
+$('presets').addEventListener('click',e=>{
+  const b=e.target.closest('[data-p]'); if(!b) return; const p=presets[b.dataset.p];
+  $(p.m==='ac'?'src-ac':'src-dc').checked=true;
+  $('in-R').value=p.R; $('in-L').value=p.L; $('in-C').value=p.C; $('in-V').value=p.V;
+  if(p.f){ $('in-f').value=p.f; $('in-fs').value=Math.log10(p.f); }
+  if(p.m==='ac') $('in-rest').checked=true;
+  rebuild(true);
+});
+$('legend').addEventListener('click',e=>{ const b=e.target.closest('[data-k]'); if(!b) return; show[b.dataset.k]=!show[b.dataset.k]; b.setAttribute('aria-pressed',show[b.dataset.k]); dirty=true; });
+$('bPlay').addEventListener('click',()=>{ play.playing=!play.playing; if(play.playing&&S&&play.t>=S.tEnd*0.999) play.t=0; $('bPlay').textContent=play.playing?'Pause':'Play'; dirty=true; });
+$('bRestart').addEventListener('click',()=>{ play.t=0; dirty=true; });
+$('scrub').addEventListener('input',()=>{ if(S){ play.t=$('scrub').value/1000*S.tEnd; dirty=true; } });
+$('speed').addEventListener('change',()=>{ play.dur=parseFloat($('speed').value); dirty=true; });
+$('bPlay').textContent=play.playing?'Pause':'Play';
+
+readColors();
+const mo=new MutationObserver(()=>{readColors();staticDirty=true;dirty=true;});
+mo.observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change',()=>{readColors();staticDirty=true;dirty=true;});
+new ResizeObserver(()=>{staticDirty=true;dirty=true;}).observe(document.querySelector('main'));
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(()=>{staticDirty=true;dirty=true;});
+
+rebuild(true);
+if(!play.playing) play.t=S.tEnd*0.6;
+let last=performance.now();
+function frame(now){
+  const d=Math.min(0.1,(now-last)/1000); last=now;
+  if(S&&play.playing){
+    play.t+=d/play.dur*S.tEnd;
+    if(play.t>S.tEnd){
+      if(P.mode==='dc'){ play.t=S.tEnd; play.playing=false; $('bPlay').textContent='Play'; }
+      else play.t=0;
+    }
+    dirty=true;
+  }
+  if(dirty){ render(); dirty=false; }
+  requestAnimationFrame(frame);
+}
+requestAnimationFrame(frame);
+})();
+</script>
 </body>
 </html>
